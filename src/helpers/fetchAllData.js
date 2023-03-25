@@ -15,7 +15,7 @@ const fetchAllData = async (number = 1) => {
   if(response.status !== 200) response = await fetch(`${URL}number=${number}&apiKey=${API_KEY2}`);
   if(response.status !== 200) response = await fetch(`${URL}number=${number}&apiKey=${API_KEY3}`);
   if(response.status !== 200) response = await fetch(`${URL}number=${number}&apiKey=${API_KEY4}`);
-  if(response.status !== 200) throw new Error("Has consumed all 4 API KEYS");
+  if(response.status !== 200) throw new Error("Has consumed all 4 API KEYS"+response.status);
   return response;
 }
 
