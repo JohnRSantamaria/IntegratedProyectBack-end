@@ -11,7 +11,7 @@ const URL = `https://api.spoonacular.com/recipes/complexSearch?addRecipeInformat
 const fetchAllData = async (number = 1) => {
 
   console.log(`number of request ${number}`);
-  let response = await fetch(`${URL}number=${number}&apiKey=${API_KEY4}`);
+  let response = await fetch(`${URL}number=${number}&apiKey=${API_KEY}`);
   if(response.status !== 200) response = await fetch(`${URL}number=${number}&apiKey=${API_KEY2}`);
   if(response.status !== 200) response = await fetch(`${URL}number=${number}&apiKey=${API_KEY3}`);
   if(response.status !== 200) response = await fetch(`${URL}number=${number}&apiKey=${API_KEY4}`);
