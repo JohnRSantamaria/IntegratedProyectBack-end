@@ -9,7 +9,7 @@ const postRecipes = async (data) => {
   const newRecipe = {
     healthScore: Number(healthScore),
     title,
-    image: image[0],
+    image,
     summary,
     steps
   }
